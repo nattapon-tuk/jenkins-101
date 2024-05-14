@@ -13,8 +13,8 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo "doing build stuff.."
-                echo "YOYO Hello Jenkins"
+                cd myapp
+                pip install -r requirements.txt
                 '''
             }
         }
@@ -22,7 +22,8 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                echo "doing test stuff.."
+                python3 hello.py
+                python3 hello.py --name=MyJenkins
                 '''
             }
         }
