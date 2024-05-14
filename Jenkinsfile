@@ -14,6 +14,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "doing build stuff.."
+                echo "YOYO Hello Jenkins"
                 '''
             }
         }
